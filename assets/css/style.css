@@ -1,0 +1,305 @@
+:root {
+  --primary-color: #fce138;
+  --secondary-color: #024e76;
+  --tertiary-color: #39a6b2;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    color: var(--tertiary-color);
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+header {
+    padding: 20px 35px;
+    background-color: var(--tertiary-color);
+     /* Makes Header sticky! */
+     position: sticky;
+     top: 0;
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: 80%;
+     /* changes stacking order for header to stay at the top */
+     z-index: 9999;
+  }
+
+
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--primary-color);
+  margin: 0;
+  display: inline;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+header nav {
+    float: right;
+    margin: 7px 0;
+  }
+
+  header nav ul li {
+      display: inline;
+      padding: 10px 15px;
+  }
+
+  header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 22px;
+  }
+
+  footer {
+    background: var(--primary-color);
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  footer h2 {
+    display: inline;
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0;
+  }
+
+  footer div {
+    float: right;
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  footer a {
+    color: var(--secondary-color);
+  }
+
+/* Hero CSS Start */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  }
+
+.hero img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+ .subtitle {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 42px;
+    border-radius: inherit;
+    background-color: gray;
+  }
+  /* Hero Style End */
+
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--black);
+  text-shadow: 0 2px 0 rgba(122, 59, 59, 0.07);
+}
+
+
+body {
+  margin: 100px;
+}
+
+/* START About Me Section Code */
+.intro {
+  display: flex;
+}
+
+.intro p {
+  line-height: 1.7;
+  color: var(--tertiary-color);
+  font-size: 20px;
+}
+/* START PORTFOLIO GRID SECTION */
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-container {
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 30px;
+  grid-auto-flow: dense;
+  width: 100%;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px; 
+}
+
+
+.grid-item {
+  display: flex;
+ /* make each one 45%, putting 10% between each element on the page */
+ width: 45%;
+ /* rounded corners */
+ border-radius: 14px;
+ border: 4px solid black;
+ background-color: #393B4F;
+ font-size: 22px;
+ font-weight: bold;
+
+ /* put space between each one vertically */
+ margin-bottom: 15px;
+
+ /* tell background to fit box no matter what */
+ background-size: cover;
+
+ /* crop it at the center */
+ background-position: center;
+
+ /* padding top and bottom 20px, 0 for left/right */
+ padding: 20px 0;
+
+ /* set minimum heigh value so there's room */
+ min-height: 250px;
+
+ /* rather than use position...use flexbox and create column instead of row */
+ display: flex;
+ flex-direction: column;
+}
+
+.grid-item span {
+width: 30%;
+background-color: #A8ADBA;
+color: #393B4F;
+padding: 10px 5px;
+text-align: center;
+}
+
+.item-1 {
+  background-image: '/assets/images/run-buddy-img.png';
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 14;
+  background-size:cover;
+  background-position: center;
+
+  }
+
+
+.item-2 {
+  background-image: url('https://www.placecage.com/g/500/500');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: span 8;
+}
+
+.item-3 {
+  background-image: url('https://www.placecage.com/g/500/500');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: span 8;
+}
+
+.item-4 {
+  background-image: url('https://www.placecage.com/g/500/500');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  background-color: purple;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 8;
+  grid-row-end: span 7;
+}
+
+
+.item-5 {
+  background-image: url('https://www.placecage.com/g/500/500');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  background-color: yellowgreen;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 8;
+  grid-row-end: span 7;
+}
+
+/* Contact Me CSS Start */
+
+.contact {
+  display: flex;
+}
+.contact-2 {
+  display:flex;
+  justify-content: space-between;
+  background: var(--secondary-color);
+  width: 50%;
+}
+
+.contact-2 a {
+display:flex;
+justify-content: space-between;
+font-size: 18px;
+margin: auto;
+}
+
+.section-title {
+  display: flex;
+  border: left;
+  font-size: 32px;
+  color: var(--secondary-color);
+  margin-bottom: 35px;
+  border-bottom: 3px solid;
+  padding-bottom: 20px;
+  padding: auto;
+  width: 10%;
+   /* Rotate div needed for section titles */
+   transform: rotate(-90deg);
+}
+
+.primary-border {
+  border-color: var(--primary-color);
+}
+
+.secondary-border {
+  border-color: var(--tertiary-color);
+}
